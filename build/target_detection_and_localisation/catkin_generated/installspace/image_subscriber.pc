@@ -1,0 +1,8 @@
+prefix=/home/angelcervant/rb5_vision/install
+
+Name: image_subscriber
+Description: Description of image_subscriber
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
