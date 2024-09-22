@@ -1,4 +1,4 @@
-# Depth Estimation for Monocular Cameras With the Qualcomm RB5 Drone
+# Depth Estimation for Monocular Camera With the Qualcomm RB5 Drone
 
 ### To test out the ROS node-
 
