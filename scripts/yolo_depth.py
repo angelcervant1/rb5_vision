@@ -19,9 +19,7 @@ def run_depth_estimator(queue):
         if not queue.empty():
             annotaed_frame, centroids = queue.get()
             depth_main(centroids, annotaed_frame)
-    
-
-    
+        
 if __name__ == "__main__":
     queue = mp.Queue()
     yolo_process = mp.Process(target=run_yolo, args=(queue,))

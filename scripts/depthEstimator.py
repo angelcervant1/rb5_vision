@@ -8,6 +8,7 @@ import numpy as np
 import open3d as o3d
 
 def depth_main(centroids: list, yolo_frame: np.ndarray):
+    
     feature_extractor = GLPNImageProcessor.from_pretrained("vinvino02/glpn-nyu")
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     model = GLPNForDepthEstimation.from_pretrained("vinvino02/glpn-nyu")
