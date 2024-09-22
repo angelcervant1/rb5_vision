@@ -1,6 +1,4 @@
-# Object detection code for the RB5 drone.
-
-This repository is essentially a ROS package.
+# Depth Estimation for Monocular Cameras With the Qualcomm RB5 Drone
 
 ### To test out the ROS node-
 
