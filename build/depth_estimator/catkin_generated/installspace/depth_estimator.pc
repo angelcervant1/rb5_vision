@@ -3,6 +3,6 @@ prefix=/home/angelcervant/rb5_vision/install
 Name: depth_estimator
 Description: Description of depth_estimator
 Version: 0.0.0
-Cflags: 
+Cflags: -I${prefix}/include
 Libs: -L${prefix}/lib 
-Requires: 
+Requires: rospy sensor_msgs std_msgs tf tf2_ros message_runtime std_msgs sensor_msgs geometry_msgs

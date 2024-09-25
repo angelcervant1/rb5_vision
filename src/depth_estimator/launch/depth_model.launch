@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<launch>
+
+    <node name="yolo_detection" pkg="depth_estimator" type="yoloModel.py" output="screen"/>
+    <node name="depth_model" pkg="depth_estimator" type="depthEstimator.py" output="screen"/>
+
+</launch>
