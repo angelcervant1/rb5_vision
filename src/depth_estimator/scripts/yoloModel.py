@@ -14,9 +14,9 @@ prev = time.time()
 
 class YoloDetectionModel():
     def __init__(self):
-        # Callback from the tracking image topic 
+        # Callback from the trackin g image topic 
         rospy.init_node("object_detection")
-        self.model = YOLO('/home/angelcervant/rb5_vision/src/depth_estimator/scripts/models/yolov8m.pt')
+        self.model = YOLO('/ws/rb5_vision/src/depth_estimator/scripts/models/yolov8m.pt')
         self.centroids = []
         self.prediction = None
         self.pub = rospy.Publisher("/yolo_prediction", ImageWithCentroids, queue_size=100)    
