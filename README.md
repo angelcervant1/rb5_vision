@@ -1,16 +1,40 @@
 # Depth Estimation for Monocular Camera With the Qualcomm RB5 Drone
 
-### To test out the ROS node-
+## Overview
+
+This repository contains the implementation of a depth estimation system using a monocular camera mounted on the Qualcomm RB5 Drone. The goal of the project is to leverage computer vision techniques to estimate depth information from a single camera feed, which can be useful for various drone applications such as obstacle avoidance, navigation, and 3D scene reconstruction.
+Features
+
+- Monocular Depth Estimation: Extracts depth information from a single camera image stream using deep learning-based techniques.
+- Integration with Qualcomm RB5 Drone: Utilizes the onboard processing capabilities of the Qualcomm RB5 platform for real-time depth estimation.
+- ROS Compatibility: Built within the ROS (Robot Operating System) framework to ensure easy integration with other drone control and navigation systems.
+- Real-time Performance: Optimized for real-time depth processing to support dynamic drone maneuvers and applications.
+
+
+
+## Requirements
+
+### Hardware
+
+    - Qualcomm RB5 Drone
+    - Monocular camera (connected to the RB5 drone)
+
+### Software
+
+    - Ubuntu 18.04 or later (tested on Qualcomm RB5)
+    - ROS Melodic
+    - torch==2.4.1
+    - opencv-python==4.7.0.72
+    - open3d==0.13.0  
+    - matplotlib==3.7.5
+    - numpy==1.24.3
+    - ultralytics==8.2.90
+    - transformers==4.44.2
+    - Pillow==10.4.0
+
+
+### To test out the ROS 
 
 1. Clone the repository
 2. Build the package with `catkin_make`
-3. Run the ROS Node `rosrun image_subscriber image_subscriber.py` while the expected topics are published.
-
-This will most probably not work due to issues with the video feed format published by the voxl_mpa_to_ros node of the RB5 drone. But the script below should work normally.
-
-### To test out RTSP node-
-
-1. Make sure the drone and the laptop/computer are on the same network
-2. Make sure the RTSP server is running on the drone - `voxl-streamer -s -p 8901 -d 1 -i hires_small_color`
-3. Execute `test_script.py` as you would a normal python script within the docker container as given [here](https://github.com/guptaPrabhav/rb5_noetic)
 
