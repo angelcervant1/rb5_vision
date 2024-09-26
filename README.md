@@ -34,11 +34,11 @@ This repository contains the implementation of a depth estimation system using a
     - Pillow==10.4.0
 
 
-### To test out the ROS 
+### To test out the ROS Node
 
-1. Clone the repository
+1. Clone the repository 
 2. Build the package with `catkin_make`
-3. Build the docker image with `docker build -t "docker-name" .
+3. Build the docker image with `docker build -t "docker-name" .`
 4. Make sure to add docker to xhost group with `xhost +local:docker` on a terminal
 5. Enter the container with `docker run --gpus all --network=host -it --privileged -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /dev/video0:/dev/video0 --rm rb5_vision bash`
 
