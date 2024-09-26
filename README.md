@@ -3,7 +3,8 @@
 ## Overview
 
 This repository contains the implementation of a depth estimation system using a monocular camera mounted on the Qualcomm RB5 Drone. The goal of the project is to leverage computer vision techniques to estimate depth information from a single camera feed, which can be useful for various drone applications such as obstacle avoidance, navigation, and 3D scene reconstruction.
-Features
+
+## Features
 
 - Monocular Depth Estimation: Extracts depth information from a single camera image stream using deep learning-based techniques.
 - Integration with Qualcomm RB5 Drone: Utilizes the onboard processing capabilities of the Qualcomm RB5 platform for real-time depth estimation.
@@ -21,8 +22,8 @@ Features
 
 ### Software
 
-    - Ubuntu 18.04 or later (tested on Qualcomm RB5)
-    - ROS Melodic
+    - Ubuntu 20.04 (tested on Qualcomm RB5 with ROS Melodic)
+    - ROS Noetic
     - torch==2.4.1
     - opencv-python==4.7.0.72
     - open3d==0.13.0  
@@ -37,4 +38,8 @@ Features
 
 1. Clone the repository
 2. Build the package with `catkin_make`
+3. Build the docker image with `docker build -t "docker-name" .
+4. Make sure to add docker to xhost group with `xhost +local:docker` on a terminal
+5. Enter the container with `docker run --gpus all --network=host -it --privileged -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /dev/video0:/dev/video0 --rm rb5_vision bash`
+
 
