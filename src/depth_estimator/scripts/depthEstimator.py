@@ -25,6 +25,7 @@ class DepthEstimator():
         self.intrinsic_matrix = np.array([[279, 0, 345],
                                     [0, 279, 211],
                                     [0, 0, 1]])
+        self.local_transformers_path = "/ws/rb5_vision/src/depth_estimator/scripts/models/models--vinvino02--glpn-nyu/snapshots/cb8ce03174424af9a3315da175ead88667f0578c"
         
     def yolo_msg_cb(self, yolo_msg):
         self.img = self.cvb.imgmsg_to_cv2(yolo_msg.image, desired_encoding="bgr8")
@@ -40,6 +41,7 @@ class DepthEstimator():
         self.drone_y = msg.pose.position.y
         
     def pixel_to_world(self, u, v, Z):
+        
         # Extract intrinsic parameters
         fx, fy = 279, 279
         cx, cy = 345, 211
@@ -50,15 +52,14 @@ class DepthEstimator():
         Z_c = Z
        
         return X_c, Y_c, Z_c
-
+    
     def depth_main(self):
         curr_time = rospy.Time.now()    
         yolo_frame = self.img 
-        feature_extractor = GLPNImageProcessor.from_pretrained("vinvino02/glpn-nyu")
+        feature_extractor = GLPNImageProcessor.from_pretrained(self.local_transformers_path)
         device = 'cuda' if torch.cuda.is_available() else 'cpu'
-        model = GLPNForDepthEstimation.from_pretrained("vinvino02/glpn-nyu")
+        model = GLPNForDepthEstimation.from_pretrained(self.local_transformers_path)
 
-        # image = Image.open("/ws/rb5_vision/images/image.jpg")
         if yolo_frame is not None:
             image = Image.fromarray(yolo_frame) if isinstance(yolo_frame, np.ndarray) else yolo_frame
             new_h = 480 if image.height < 480 else image.height

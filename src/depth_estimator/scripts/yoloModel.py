@@ -16,7 +16,7 @@ class YoloDetectionModel():
     def __init__(self):
         # Callback from the tracking image topic 
         rospy.init_node("object_detection")
-        self.model = YOLO('/home/angelcervant/rb5_vision/src/depth_estimator/scripts/model/yolov8m.pt')
+        self.model = YOLO('/home/angelcervant/rb5_vision/src/depth_estimator/scripts/models/yolov8m.pt')
         self.centroids = []
         self.prediction = None
         self.pub = rospy.Publisher("/yolo_prediction", ImageWithCentroids, queue_size=100)    
@@ -29,7 +29,6 @@ class YoloDetectionModel():
         
     def img_cb(self, msg):
         self.img = self.cvb.imgmsg_to_cv2(msg, desired_encoding="bgr8")
-        # rospy.loginfo(f"Shape: {self.img.shape}")
 
     def get_centroids(self) -> list:
         return self.centroids
@@ -37,7 +36,6 @@ class YoloDetectionModel():
     def yolo_main(self):        
         curr_time = rospy.Time.now()
         self.dt = (curr_time - self.last_time).to_sec() 
-        # rospy.loginfo(f"current dt: {self.dt}")
        
         if self.dt>(1/frame_rate) and self.img is not None:
             self.last_time = curr_time
@@ -61,7 +59,6 @@ class YoloDetectionModel():
                         self.centroids.append((cx, cy))
                         rospy.loginfo(f"Centroid: ({cx}, {cy}) ")
                         cv2.circle(self.prediction, (int(cx), int(cy)), 5, (0, 255, 0), -1)
-                        # self.yolo_msg.image = self.cvb.cv2_to_imgmsg(self.prediction, encoding="bgr8")
                         self.yolo_msg.image = self.cvb.cv2_to_imgmsg(self.img, encoding="bgr8")
                         self.pub.publish(self.yolo_msg)
                         if self.prediction is not None:
@@ -71,7 +68,6 @@ class YoloDetectionModel():
                 print(f"Error during prediction: {e}") 
         else:
             rospy.logwarn("Not image received yet..")
-            
 
     def run(self):        
         self.yolo_main()

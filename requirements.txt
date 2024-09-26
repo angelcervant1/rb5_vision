@@ -1,8 +1,8 @@
-torch
-opencv-python
-open3d
-matplotlib
-numpy
-ultralytics
-transformers
-Pillow
+torch==2.4.1
+opencv-python==4.7.0.72
+open3d==0.13.0  
+matplotlib==3.7.5
+numpy==1.24.3
+ultralytics==8.2.90
+transformers==4.44.2
+Pillow==10.4.0

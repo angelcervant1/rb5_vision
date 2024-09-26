@@ -1,2 +1,0 @@
-depth_estimator
--DCATKIN_DEVEL_PREFIX=/home/angelcervant/rb5_vision/devel -DCMAKE_INSTALL_PREFIX=/home/angelcervant/rb5_vision/install -G Unix Makefiles
