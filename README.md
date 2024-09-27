@@ -26,12 +26,7 @@ This repository contains the implementation of a depth estimation system using a
       <b>Object Detection</b>
     </td>
     <td align="center">
-      <img src="src/depth_estimator/images/depth2.png" alt="Depth Estimation" width="400"/><br>
-      <b>Depth Estimation</b>
-    </td>
-    <td align="center">
-      <img src="src/depth_estimator/images/depth1.png" alt="Depth Estimation (Zoom in)" width="400"/><br>
-      <b>Depth Estimation</b>
+      <img src="src/depth_estimator/images/depth1.png" alt="Depth Estimation" width="400"/><br>
     </td>
   </tr>
 </table>
