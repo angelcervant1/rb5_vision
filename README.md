@@ -39,6 +39,7 @@ This repository contains the implementation of a depth estimation system using a
 
 ### To test out the ROS Node
 
+```bash
 1. Clone the repository 
 2. Build the package with `catkin_make`
 3. Build the docker image with `docker build -t rb5_vision .`
