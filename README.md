@@ -47,6 +47,7 @@ This repository contains the implementation of a depth estimation system using a
 ### Hardware
 
   - Qualcomm RB5 Drone
+  - Host Computer with Display
 
 ### Software
 
