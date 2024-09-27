@@ -38,7 +38,7 @@ This repository contains the implementation of a depth estimation system using a
 
 - Monocular Depth Estimation: Extracts depth information from a single camera image stream using deep learning-based techniques.
 - Integration with Qualcomm RB5 Drone: Utilizes the onboard processing capabilities of the Qualcomm RB5 platform for real-time depth estimation.
-- ROS Compatibility: Built within the ROS (Robot Operating System) framework to ensure easy integration with other drone control and navigation systems.
+- ROS Compatibility: Built within the ROS (Robot Operating System) framework to ensure easy integration with other drone control and navigation systems. This provided node also publishes the estimated 2D Pose of the detected object(s) in the global frame.
 - Real-time Performance: Optimized for real-time depth processing to support dynamic drone maneuvers and applications.
 
 
