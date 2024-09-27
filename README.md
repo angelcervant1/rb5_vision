@@ -10,6 +10,9 @@ This repository contains the implementation of a depth estimation system using a
   <img src="src/depth_estimator/images/imagecopy2.png" alt="Depth Estimation" width="400"/>
 </p>
 
+<p align="center">
+  <b>Figure 1:</b> Object Detection (left), Depth Estimation (right)
+</p>
 
 ## Features
 
@@ -17,11 +20,6 @@ This repository contains the implementation of a depth estimation system using a
 - Integration with Qualcomm RB5 Drone: Utilizes the onboard processing capabilities of the Qualcomm RB5 platform for real-time depth estimation.
 - ROS Compatibility: Built within the ROS (Robot Operating System) framework to ensure easy integration with other drone control and navigation systems.
 - Real-time Performance: Optimized for real-time depth processing to support dynamic drone maneuvers and applications.
-<<<<<<< HEAD
-=======
-![Object Detection](src/depth_estimator/images/imagecopy3.png)
-![Depth Estimation](src/depth_estimator/images/imagecopy2.png)
->>>>>>> c5824d94bd8384f27d8658d87606c8fd4d14de6b
 
 
 ## Requirements
