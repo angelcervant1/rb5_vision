@@ -5,14 +5,18 @@
 This repository contains the implementation of a depth estimation system using a monocular camera mounted on the Qualcomm RB5 Drone. The goal of the project is to leverage computer vision techniques to estimate depth information from a single camera feed, which can be useful for various drone applications such as obstacle avoidance, navigation, and 3D scene reconstruction.
 ## Example
 
-<p align="center">
-  <img src="src/depth_estimator/images/imagecopy3.png" alt="Object Detection" width="400"/>
-  <img src="src/depth_estimator/images/imagecopy2.png" alt="Depth Estimation" width="400"/>
-</p>
-
-<p align="center">
-  <b>Figure 1:</b> Object Detection (left), Depth Estimation (right)
-</p>
+<table>
+  <tr>
+    <td align="center">
+      <img src="src/depth_estimator/images/imagecopy3.png" alt="Object Detection" width="400"/><br>
+      <b>Object Detection</b>
+    </td>
+    <td align="center">
+      <img src="src/depth_estimator/images/imagecopy2.png" alt="Depth Estimation" width="400"/><br>
+      <b>Depth Estimation</b>
+    </td>
+  </tr>
+</table>
 
 ## Features
 
