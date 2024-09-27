@@ -36,17 +36,6 @@ This repository contains the implementation of a depth estimation system using a
 
   - Docker>=20.0
   - Ubuntu 20.04 (tested on Qualcomm RB5 with ROS Melodic)
-  - Python>=3.0
-  - ROS Noetic
-  - torch==2.4.1
-  - opencv-python==4.7.0.72
-  - open3d==0.13.0  
-  - matplotlib==3.7.5
-  - numpy==1.24.3
-  - ultralytics==8.2.90
-  - transformers==4.44.2
-  - Pillow==10.4.0
-
 
 ### To test out the ROS Node
 
