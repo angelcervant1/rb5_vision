@@ -141,7 +141,7 @@ class DepthEstimator():
                     rospy.loginfo(f"Object {i+1} Depth at centroid ({cx}, {cy}): {depth_value} m")
                 else:
                     rospy.loginfo(f"Object {i+1} Centroid ({cx}, {cy}) is out of bounds after resizing and padding.")
-            # o3d.visualization.draw_geometries([pcd])
+            o3d.visualization.draw_geometries([pcd])
         else:
             rospy.logwarn(f"Depth Estimator has no input image")
         
