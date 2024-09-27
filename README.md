@@ -44,5 +44,6 @@ This repository contains the implementation of a depth estimation system using a
 3. Build the docker image with `docker build -t rb5_vision .`
 4. Make sure to add docker to xhost group with `xhost +local:docker` on a terminal
 5. Enter the container with `docker run --gpus all --network=host -it --privileged -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /dev/video0:/dev/video0 --rm rb5_vision bash`
-6. When inside the container run the following command `roslaunch depth_estimator depth_model.launch`
+6. If previous code through an nvidia-runtime error. Then ignore the `--gpus all` flag and run the following command: `docker run --network=host -it --privileged -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /dev/video0:/dev/video0 --rm rb5_vision bash`
+7. When inside the container run the following command `roslaunch depth_estimator depth_model.launch`
 
