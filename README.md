@@ -56,7 +56,7 @@ This repository contains the implementation of a depth estimation system using a
 
 ## For testing the ROS Node
 
-1. Clone the repository with `git clone with https://github.com/angelcervant1/rb5_vision.git`
+1. Clone the repository with `git clone https://github.com/angelcervant1/rb5_vision.git`
 3. Enter into the folder and build the package with `catkin_make`
 4. Build the docker image with `docker build -t rb5_vision .`
 5. Make sure to add docker to xhost group with `xhost +local:docker` on a terminal
