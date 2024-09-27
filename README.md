@@ -13,7 +13,7 @@ This repository contains the implementation of a depth estimation system using a
     </td>
     <td align="center">
       <img src="src/depth_estimator/images/depth3.png" alt="Depth Estimation" width="400"/><br>
-      <b>Depth Estimation</b>
+      <b>3D Point Cloud</b>
     </td>
   </tr>
 </table>
@@ -27,6 +27,7 @@ This repository contains the implementation of a depth estimation system using a
     </td>
     <td align="center">
       <img src="src/depth_estimator/images/depth1.png" alt="Depth Estimation" width="400"/><br>
+      <b>3D Point Cloud</b>
     </td>
   </tr>
 </table>
