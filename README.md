@@ -46,9 +46,10 @@ git clone with https://github.com/angelcervant1/rb5_vision.git
 3. Build the package with `catkin_make`
 4. Build the docker image with `docker build -t rb5_vision .`
 5. Make sure to add docker to xhost group with `xhost +local:docker` on a terminal
+6. Make sure to be running the [voxl-mpa-to-ros](https://gitlab.com/voxl-public/voxl-sdk/utilities/voxl-mpa-to-ros) node inside the RB5 Drone (click into the link for further details)
+7. Set the correct `ROS IP` and `ROS MASTER URI` on both devices for the code to run propperly.
 
-  
-7. Enter the container with
+8. Enter the container with
 ```
 docker run --gpus all --network=host -it --privileged -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /dev/video0:/dev/video0 --rm rb5_vision bash
 ```
