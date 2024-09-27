@@ -43,7 +43,7 @@ This repository contains the implementation of a depth estimation system using a
 ```
 git clone with https://github.com/angelcervant1/rb5_vision.git
 ```
-3. Build the package with `catkin_make`
+3. Enter into the folder and build the package with `catkin_make`
 4. Build the docker image with `docker build -t rb5_vision .`
 5. Make sure to add docker to xhost group with `xhost +local:docker` on a terminal
 6. Make sure to be running the [voxl-mpa-to-ros](https://gitlab.com/voxl-public/voxl-sdk/utilities/voxl-mpa-to-ros) node inside the RB5 Drone
