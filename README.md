@@ -37,7 +37,8 @@ This repository contains the implementation of a depth estimation system using a
   - Docker>=20.0
   - Ubuntu 20.04 (tested on Qualcomm RB5 with ROS Melodic)
 
-### To test out the ROS Node
+
+## For testing the ROS Node
 
 1. Clone the repository
 ```
