@@ -69,7 +69,7 @@ This repository contains the implementation of a depth estimation system using a
 docker run --gpus all --network=host -it --privileged -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /dev/video0:/dev/video0 --rm rb5_vision bash
 ```
 
-8. If previous code through an nvidia-runtime or similar error. Then ignore the `--gpus all` flag and run the following command: 
+8. If previous code raises an nvidia-runtime or similar error. Then ignore the `--gpus all` flag and run the following command: 
 ```
 docker run --network=host -it --privileged -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /dev/video0:/dev/video0 --rm rb5_vision bash
 ```
